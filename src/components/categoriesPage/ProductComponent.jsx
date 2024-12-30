@@ -42,7 +42,7 @@ export default function ProductComponent({ data, inx, val, cartArr, setCartArr, 
     const moveToProductPage=()=>{
         params.name = val.name;
         setCurrentProduct(val);
-        nav(`/jason's_website/products/${params.name}`);
+        nav(`/online_shop/products/${params.name}`);
         window.scrollTo({
             top:0,
             'behavior':'smooth'
