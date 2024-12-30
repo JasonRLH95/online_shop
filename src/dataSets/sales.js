@@ -9,7 +9,6 @@ import phoneSale2 from '../images/products/Phone/default_sales_phone_2.jpg';
 import phoneSale3 from '../images/products/Phone/default_sales_phone_3.jpg';
 
 
-// לייבא תמונות וקישורים במקום טייטל וקונטנט
 const sales =[
     [
         {

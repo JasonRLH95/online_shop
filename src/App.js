@@ -36,7 +36,6 @@ function App() {
           <Route path="/online_shop/payment" element={<Payment data={data} arr={cartArr} setCartArr={setCartArr} finalPrice={finalPrice} setFinalPrice={setFinalPrice}/>}/>
           <Route path="/online_shop/products/:name" element={<ProductPage currentProduct={currentProduct}/>}/>
         </Routes>
-        {/* {payAlertFlag && <PayAlert pay={pay} setPayAlertFlag={setPayAlertFlag}/>} */}
         <SubAdv data={data}/>
       </BrowserRouter>
     </div>

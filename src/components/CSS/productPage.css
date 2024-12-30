@@ -1,7 +1,6 @@
 .productPage_component{
     width: 100%;
     height: 100vh;
-    /* background-color: cornsilk; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +18,6 @@
 .productPage_rightDetails{
     width: 40%;
     height: 100%;
-    /* background-color: red; */
     border-left: 2px solid white;
     display: flex;
     flex-direction: column;
@@ -44,8 +42,6 @@
 
 
 .productPage_leftDetails{
-    /* border: 1px solid black; */
-    /* background-color: blue; */
     width: 60%;
     height: 100%;
     display: flex;
@@ -64,6 +60,5 @@
 }
 .productPage_desc{
     width: 80%;
-    /* background-color: red; */
     font-size: 30px;
 }

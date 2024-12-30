@@ -15,8 +15,8 @@ export default function Home({data}) {
     const articleSlidersDeploy = ()=>{
       return data.sales.map((category) => {
               return (
-                <div>
-                  <h2>{category[0].header}</h2>
+                <div className='articleSliders_mainDiv'>
+                  <h2 className='articleSliders_header'>{category[0].header}</h2>
                   <ArticleSlider articles={category}/>
                 </div>
               );
@@ -30,7 +30,7 @@ export default function Home({data}) {
         <div id='advertismentMainDiv'>
             <img id='advertismentSlider' src={data.advertisments[1][place]} alt="main_advertisments" width={200} height={200}/>
         </div>
-        <h2 dir='rtl' id='home_salesHeader'>מבצעים</h2>
+        <h2 dir='rtl' id='home_salesHeader'>מה חדש אצלנו?</h2>
         <div id='home_salesContainer'>
           {articleSlidersDeploy()}
         </div>

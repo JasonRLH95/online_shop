@@ -16,7 +16,7 @@ export default function Categories({ data, cartArr, setCartArr, CartItem, finalP
         //  according to number of categories exists, return buttons to change products
         
         return data.categoriesArr.map((val,inx)=>{
-            return <CategoryBtn arr={data.categoriesArr} logo={val.logo} name={val.name} header={val.header} change={changeCategoryDisplay} inx={inx}/>
+            return <CategoryBtn logo={val.logo} name={val.name} change={changeCategoryDisplay} inx={inx}/>
         })
     }
 
@@ -37,20 +37,10 @@ export default function Categories({ data, cartArr, setCartArr, CartItem, finalP
 
 
 
-    // const [isDescPositive,setIsDescPositive] = useState(false);
-    // const openDescriptionDiv=()=>{
-    //     if(isDescPositive){
-    //         return <div id='descriptionDiv'>d</div>
-    //     }
-    //     else{
-    //         return null;
-    //     }
-    // }
   return (
     <div id='categoriesMainContainer'>
         <div id='categoryBtnsContainer'>{categoriesDeploy()}</div>
         <div id='productsComponentsDiv'>{returnCategoryRequested()}</div>
-        {/* {openDescriptionDiv()} */}
     </div>
   )
 }

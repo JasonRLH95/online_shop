@@ -1,0 +1,16 @@
+.articleCard_component{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.salesImages{
+    background-color: whitesmoke;
+    width: 90%;
+    height: 90%;
+    transition: all 0.5s ease;
+}
+.salesImages:hover{
+    box-shadow: 0 0 15px rgba(30,70,130,0.2);
+    transform: scale(1.1);
+}

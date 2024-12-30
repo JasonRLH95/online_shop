@@ -8,6 +8,7 @@ import media from "./media";
 import sales from "./sales";
 import navBtns from "./navBtns";
 import companies from "./companies";
+import drawings from "./drawings";
 
 const data = {
     products,
@@ -20,6 +21,7 @@ const data = {
     sales,
     navBtns,
     companies,
+    drawings,
 };
 
 export default data;

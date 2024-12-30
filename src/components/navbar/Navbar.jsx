@@ -57,7 +57,7 @@ export default function Navbar({ data, cart, setCurrentProduct }) {
     <div id='navbarMainDiv'>
       <div id='navbarUpperDiv'>
         <div id='navbarUpperDiv_right'>
-          <img src={data.logos[0].logo1} alt="TechSonic_logo" id='navbarLogo' onClick={()=>{nav(data.navBtns[0].link)}}/>
+          <img src={data.logos.logo1} alt="TechSonic_logo" id='navbarLogo' onClick={()=>{nav(data.navBtns[0].link)}}/>
         </div>
         <div id='navbarUpperDiv_middle'>
           <input type="text" className='searchbar_input' placeholder='Search...' onChange={(e)=>{setSearchData(e.target.value)}}/>

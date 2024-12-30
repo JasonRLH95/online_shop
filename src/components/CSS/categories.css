@@ -8,14 +8,12 @@
 #categoryBtnsContainer{
     display: flex;
     flex-direction: row;
-    /* background-color: green; */
     justify-content: center;
 }
 #productsComponentsDiv{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* background-color: red; */
     width: 85%;
 }
 #descriptionDiv{

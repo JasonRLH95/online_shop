@@ -1,12 +1,11 @@
 import React from 'react';
-import branches from '../../dataSets/branches';
 import BranchComponent from './BranchComponent';
 import '../CSS/branches.css';
 
-export default function Branches() {
+export default function Branches({data}) {
     const deployBrances=()=>{
-        return branches.map((val)=>{
-            return <BranchComponent city={val.city} address={val.address} week={val.week} hours={val.hours}/>
+        return data.branches.map((val)=>{
+            return <BranchComponent data={data} city={val.city} address={val.address} week={val.week} hours={val.hours}/>
         })
     }
   return (

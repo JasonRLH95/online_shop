@@ -1,8 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import '../CSS/subAdv.css';
-import advertisments from '../../dataSets/advertisments';
 
-export default function SubAdv() {
+export default function SubAdv({data}) {
   const [place1,setPlace1] = useState(0);
   useEffect(()=>{
     const placeChanger1 = setInterval(() => {
@@ -12,7 +11,7 @@ export default function SubAdv() {
   });
   return (
     <div id='subAdv_mainContainer'>
-      <img id='subAdv_slider' src={advertisments[0][place1]} alt="" />
+      <img id='subAdv_slider' src={data.advertisments[0][place1]} alt="" />
     </div>
   )
 }
