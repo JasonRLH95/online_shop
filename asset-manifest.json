@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/online_shop/static/css/main.5b47f137.css",
-    "main.js": "/online_shop/static/js/main.8a8a0a85.js",
+    "main.js": "/online_shop/static/js/main.6f7e0018.js",
     "static/js/453.16597c87.chunk.js": "/online_shop/static/js/453.16597c87.chunk.js",
     "static/media/TV_samsung.jpg": "/online_shop/static/media/TV_samsung.b01a6905c8dff71c7da1.jpg",
     "static/media/TV_LG.jpg": "/online_shop/static/media/TV_LG.8372c4dc3a1596b1a0ec.jpg",
@@ -95,11 +95,11 @@
     "static/media/laptop_MSI.webp": "/online_shop/static/media/laptop_MSI.28b871117b83689d764e.webp",
     "index.html": "/online_shop/index.html",
     "main.5b47f137.css.map": "/online_shop/static/css/main.5b47f137.css.map",
-    "main.8a8a0a85.js.map": "/online_shop/static/js/main.8a8a0a85.js.map",
+    "main.6f7e0018.js.map": "/online_shop/static/js/main.6f7e0018.js.map",
     "453.16597c87.chunk.js.map": "/online_shop/static/js/453.16597c87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b47f137.css",
-    "static/js/main.8a8a0a85.js"
+    "static/js/main.6f7e0018.js"
   ]
 }
