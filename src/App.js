@@ -28,7 +28,7 @@ function App() {
         <Routes>
           {/* באופן כללי תמיד נתיב ההתחלה שלנו יהיה /, ניתן לשנות את זה בpackege json
           בהתאמה כך שהשבילים יהיו תואמים אחד את השני במידה ונרצה לאתחל את האתר מנתיב אחר כמו שמוצג*/}
-          <Route path="/Jason's_website" element={<Home data={data}/>}/>
+          <Route path="/" element={<Home data={data}/>}/>
           <Route path="/jason's_website/products" element={<Categories data={data} cartArr={cartArr} setCartArr={setCartArr} CartItem={CartItem} finalPrice={finalPrice} setFinalPrice={setFinalPrice} setCurrentProduct={setCurrentProduct}/>}/>
           <Route path="/jason's_website/branch_and_activity_hours" element={<Branches data={data}/>}/>
           <Route path="/jason's_website/jobs" element={<Jobs data={data}/>}/>
