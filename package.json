@@ -13,7 +13,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://jasonrlh95.github.io/online_shop/",
+  "homepage": "http://jasonrlh95.github.io/online_shop/jason's_website",
   "scripts": {
     "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
