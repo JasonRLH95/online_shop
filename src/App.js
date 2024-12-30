@@ -29,12 +29,12 @@ function App() {
           {/* באופן כללי תמיד נתיב ההתחלה שלנו יהיה /, ניתן לשנות את זה בpackege json
           בהתאמה כך שהשבילים יהיו תואמים אחד את השני במידה ונרצה לאתחל את האתר מנתיב אחר כמו שמוצג*/}
           <Route path="/online_shop" element={<Home data={data}/>}/>
-          <Route path="/jason's_website/products" element={<Categories data={data} cartArr={cartArr} setCartArr={setCartArr} CartItem={CartItem} finalPrice={finalPrice} setFinalPrice={setFinalPrice} setCurrentProduct={setCurrentProduct}/>}/>
-          <Route path="/jason's_website/branch_and_activity_hours" element={<Branches data={data}/>}/>
-          <Route path="/jason's_website/jobs" element={<Jobs data={data}/>}/>
-          <Route path="/jason's_website/helpdesk" element={<HelpDesk data={data}/>}/>
-          <Route path="/jason's_website/payment" element={<Payment data={data} arr={cartArr} setCartArr={setCartArr} finalPrice={finalPrice} setFinalPrice={setFinalPrice}/>}/>
-          <Route path="/jason's_website/products/:name" element={<ProductPage currentProduct={currentProduct}/>}/>
+          <Route path="/online_shop/products" element={<Categories data={data} cartArr={cartArr} setCartArr={setCartArr} CartItem={CartItem} finalPrice={finalPrice} setFinalPrice={setFinalPrice} setCurrentProduct={setCurrentProduct}/>}/>
+          <Route path="/online_shop/branch_and_activity_hours" element={<Branches data={data}/>}/>
+          <Route path="/online_shop/jobs" element={<Jobs data={data}/>}/>
+          <Route path="/online_shop/helpdesk" element={<HelpDesk data={data}/>}/>
+          <Route path="/online_shop/payment" element={<Payment data={data} arr={cartArr} setCartArr={setCartArr} finalPrice={finalPrice} setFinalPrice={setFinalPrice}/>}/>
+          <Route path="/online_shop/products/:name" element={<ProductPage currentProduct={currentProduct}/>}/>
         </Routes>
         {/* {payAlertFlag && <PayAlert pay={pay} setPayAlertFlag={setPayAlertFlag}/>} */}
         <SubAdv data={data}/>

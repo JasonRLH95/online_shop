@@ -1,23 +1,23 @@
 const navBtns=[
     {
       btnName:"עמוד הבית",
-      link: "/jason's_website",
+      link: "/online_shop",
     },
     {
       btnName:"קטגוריות",
-      link: "/jason's_website/products",
+      link: "/online_shop/products",
     },
     {
       btnName:"סניפים ושעות פעילות",
-      link: "/jason's_website/branch_and_activity_hours",
+      link: "/online_shop/branch_and_activity_hours",
     },
     {
       btnName:"בואו לעבוד איתנו!",
-      link: "/jason's_website/jobs",
+      link: "/online_shop/jobs",
     },
     {
       btnName:"שירות לקוחות",
-      link: "/jason's_website/helpdesk",
+      link: "/online_shop/helpdesk",
     },
   ]
 
