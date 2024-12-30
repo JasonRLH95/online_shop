@@ -1,0 +1,20 @@
+.categoryBtn{
+    width: 75px;
+    height: 75px;
+    border: 1px solid rgba(30, 70, 130, 1);
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 15px;
+}
+.categoryBtn:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+.imgtemp{
+    border-radius: 100%;
+}

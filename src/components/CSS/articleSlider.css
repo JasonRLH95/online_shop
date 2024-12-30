@@ -1,0 +1,22 @@
+.articleCard{
+    cursor: pointer;
+}
+.articleMovementBtns{
+    width: 30px;
+    height: 200px;
+    border: none;
+    cursor: pointer;
+}
+.articleMovementBtns:hover{
+    background-color: rgba(30,70,130,0.2);
+    box-shadow: 0 0 5px grey;
+}
+.salesImages{
+    width: 90%;
+    height: 90%;
+    transition: all 0.5s ease;
+}
+.salesImages:hover{
+    box-shadow: 0 0 15px rgba(30,70,130,0.2);
+    transform: scale(1.1);
+}

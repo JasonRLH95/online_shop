@@ -1,0 +1,70 @@
+.branch{
+    width: 350px;
+    height: 200px;
+    border: 2px solid rgba(50, 90, 150, 1);
+    border-radius: 5px;
+    margin: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.branch:hover{
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.423);
+}
+.cityHeaderDiv{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-bottom: 2px solid rgba(50, 90, 150, 1);;
+}
+.cityHeader{
+    /* background-color: green; */
+    font-size: 25px;
+    margin-right: 20px;
+}
+.addressDiv{
+    width:100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+.branchesLocationLogo,.branchesClockLogo{
+    margin-right: 15px;
+}
+.addressHeader,.hoursP1{
+    margin-right: 5px;
+}
+.hoursDiv{
+    display: flex;
+    flex-direction: column;
+}
+.hoursHeader{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    height: 25px;
+}
+.branchesClockLogo{
+    width: 20px;
+    height: 20px;
+}
+.hoursP1{
+    font-size: 13px;
+}
+.hoursDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* background-color: red; */
+}
+.hoursP2{
+    margin: 5px 40px;
+    font-size: 15px;
+    width: fit-content;
+    /* background-color: green; */
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}

@@ -1,0 +1,27 @@
+#categoriesMainContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#categoryBtnsContainer{
+    display: flex;
+    flex-direction: row;
+    /* background-color: green; */
+    justify-content: center;
+}
+#productsComponentsDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    width: 85%;
+}
+#descriptionDiv{
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(30, 70, 130, 1);
+    position: absolute;
+    
+}

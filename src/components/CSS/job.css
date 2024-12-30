@@ -1,0 +1,49 @@
+.jobMainDiv{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 200px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 20px 0;
+    position: relative;
+}
+.jobMainDiv:hover{
+    box-shadow: 0 0 15px grey;
+}
+.daysCounter{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: grey;
+}
+.jobCard{
+    width: 100%;
+    height: 200px;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.jobCardHeader{
+    width: 30%;
+    height: 100%;
+    border-left: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jobCardDesc{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jobCardArrow{
+    width: 3%;
+    cursor: pointer;
+}
+.jobCardArrow:hover{
+    box-shadow: 0 0 5px grey;
+}

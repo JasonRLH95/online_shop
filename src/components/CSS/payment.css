@@ -1,0 +1,48 @@
+#payment_mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color:antiquewhite; */
+}
+#ul_mainDiv{
+    width: 40%;
+    min-width: 450px;
+    height: fit-content;
+    min-height: 400px;
+    border: 1px solid black;
+    background-color: rgb(55, 120, 218);
+    border-radius: 35px;
+}
+.payment_table,.payment_th,.payment_td,.payment_tr{
+    border: 1px solid rgba(30, 70, 130, 1);
+    border-collapse: collapse;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black;
+}
+.payment_table{
+    width: 90%;
+    margin: auto;
+
+}
+.payment_th{
+    width: 33%;
+
+}
+.finalPrice{
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black;
+}
+.payBtn{
+    width: 40%;
+    height: 35px;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: rgba(30, 70, 130, 1);
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black;
+    cursor: pointer;
+}
+.payBtn:hover{
+    color: rgb(55, 120, 218);
+}
