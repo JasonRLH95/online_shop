@@ -12,7 +12,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://localhost:3000/jason's_website",
+  "homepage": "http://jasonrlh95.github.io/online_shop/jason's_website",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
