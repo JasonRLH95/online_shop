@@ -1,0 +1,59 @@
+.connected_profile{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.profile_image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: blue;
+    background: url("../../images/resources/def_img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.profile_details{
+    width: 50%;
+    height: 60%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    text-indent: 10px;
+    font-weight: bold;
+}
+.logout_btn{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.logout_btn:hover{
+    color: red;
+}
+.disconnected_profile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.signBtns{
+    min-width: 100px;
+    width: 40%;
+    height: 50%;
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px grey;
+    cursor: pointer;
+}
+.signBtns:hover{
+    color: rgba(30, 70, 130, 1);
+    text-shadow: none;
+}

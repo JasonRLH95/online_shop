@@ -1,17 +1,21 @@
 .articleSlider_component{
-    width: 90%;
+    width: 80%;
     height: 300px;
     margin: auto;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .articleSlider_container{
     display: flex;
     height: 70%;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(55, 120, 218);
+    background-color: lightgrey;
     padding: 20px 15px;
     border-radius: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
 }
 
 
@@ -23,6 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 20px;
 }
 .articleMovementBtns{
     background-color: rgba(30, 70, 130, 1);

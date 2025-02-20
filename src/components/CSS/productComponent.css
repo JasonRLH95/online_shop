@@ -37,6 +37,7 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     box-shadow: 0 0 5px grey;
+    z-index: 20;
 }
 .moreInfo:hover{
     background-color: rgba(30, 70, 130, 1);
@@ -46,6 +47,10 @@
     width: 250px;
     height: 200px;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+.productComp_logo:hover{
+    scale: 1.1;
 }
 .productComp_name{
     width: 250px;
@@ -81,4 +86,17 @@
     display: flex;
     justify-content: right;
     align-items: center;
+}
+.onSaleMsg{
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(50, 90, 150, 1);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }

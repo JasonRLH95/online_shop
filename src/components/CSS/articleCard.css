@@ -1,16 +1,43 @@
 .articleCard_component{
-    height: 200px;
+    height: 160px;
+    width: 200px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.articleCard_component:hover{
+    box-shadow: 0 0 15px rgba(30,70,130,0.2);
+}
+.discountDiv{
+    width: 120px;
+    height: 40px;
+    background-color: rgba(30,70,130,0.9);
+    rotate: -40deg;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    color: white;
+    /* font-weight: bold; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-size: 20px;
+    z-index: 10;
 }
 .salesImages{
-    background-color: whitesmoke;
+    background-color: white;
     width: 90%;
     height: 90%;
     transition: all 0.5s ease;
+    z-index: 9;
 }
 .salesImages:hover{
-    box-shadow: 0 0 15px rgba(30,70,130,0.2);
     transform: scale(1.1);
 }

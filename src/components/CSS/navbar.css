@@ -11,7 +11,7 @@
     height: 160px;
     border-radius: 100%;
     cursor: pointer;
-    z-index: 11;
+    z-index: 12;
 }
 #navbarLogo:hover{
     filter:contrast(80%)
@@ -22,11 +22,22 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    z-index: 11;
 }
 #navbarUpperDiv_right{
-    width: 25%;
+    width: 15%;
     display: flex;
     justify-content: right;
+    z-index: 13;
+}
+.profile_container{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 14;
 }
 #navbarUpperDiv_middle{
     width: 40%;
@@ -36,6 +47,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 13;
+    /* background-color: yellow; */
 }
 .searchbar_input{
     width: 80%;
@@ -43,6 +56,7 @@
     border-radius: 15px;
     text-indent: 10px;
     font-size: 18px;
+    z-index: 14;
 }
 .dynamicResultList{
     width: 100%;
@@ -60,19 +74,24 @@
     text-align: left;
     text-indent: 20px;
     border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+.searchResultRow:hover{
+    background-color: darkgrey;
 }
 
 
 
-
 #navbarUpperDiv_left{
-    width: 32%;
+    width: 22%;
     padding-left: 3%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    z-index: 13;
+    /* background-color: orange; */
 }
 #navbarLowerDiv{
     width: 100%;

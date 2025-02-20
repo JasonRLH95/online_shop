@@ -5,6 +5,7 @@ import whatsappLogo from '../images/resources/whatsapp_logo.jpg';
 import locationLogo from "../images/resources/locationLogo.png";
 import clockLogo from "../images/resources/clockLogo.png";
 import downArrow from "../images/resources/downArrow.png";
+import emailIcon from "../images/resources/email_icon.png";
 
 const media = [
     {
@@ -15,7 +16,7 @@ const media = [
         locationLogo,
         clockLogo,
         downArrow,
-        
+        emailIcon,
     },
 
 

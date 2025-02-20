@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .productPage_container{
     width: 80%;
@@ -30,6 +31,20 @@
     border-radius: 15px;
     margin-bottom: 8%;
     background-color: white;
+}
+.productPage_addBtn{
+    width: 200px;
+    height: 30px;
+    background-color: rgba(30, 70, 130, 1);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.productPage_addBtn:hover{
+    color: rgba(30, 70, 130, 1);
+    background-color: white;
+    border: 1px solid rgba(30, 70, 130, 1);
 }
 .productPage_rightDetails h2{
     height: 15%;

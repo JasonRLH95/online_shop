@@ -10,7 +10,7 @@ export default function Branches({data}) {
     }
   return (
     <div id='branchesMainContainer'>
-        <h1 dir='rtl'>הסניפים שלנו</h1>
+        <h1 style={{margin:"50px auto"}} dir='rtl'>הסניפים שלנו</h1>
         <div id='deployedBranchesDiv'>{deployBrances()}</div>
     </div>
   )

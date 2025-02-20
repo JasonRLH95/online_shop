@@ -9,3 +9,21 @@
     align-items: flex-end;
     justify-content: center;
 }
+.helpDesk_email{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.emailIcon_a{
+    width: 30px;
+    height: 30px;
+    background: url("../../images/resources/email_icon.png");
+    background-position: center;
+    background-size: cover;
+    filter: contrast(30%);
+    border: none;
+    margin-right: 10px;
+}
+.emailIcon_a:hover{
+    filter:saturate(100) invert(100%);
+}

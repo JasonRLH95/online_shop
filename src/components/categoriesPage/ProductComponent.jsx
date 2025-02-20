@@ -2,18 +2,35 @@ import React,{ useState } from 'react';
 import '../CSS/productComponent.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-export default function ProductComponent({ data, inx, val, cartArr, setCartArr, CartItem, finalPrice, setFinalPrice, setCurrentProduct }) {
+export default function ProductComponent({ data, inx, val, cartArr, setCartArr, CartItem, finalPrice, setFinalPrice, setCurrentProduct, connected, alertFlag, setAlertFlag, problem, setProblem }) {
     const [isHovered, setIsHovered] = useState(false);
     const [description, setDescription] = useState('');
     const params = useParams();
     const nav = useNavigate();
+    const discountCalc = parseFloat(val.price/100) * (100-val.disValue);
 
 
     // function for adding the products to the cart
     const addToCart=(name,price)=>{
-        setFinalPrice(finalPrice+price)
+        if(!connected){
+            setAlertFlag(true);
+            setProblem("You must sign in first");
+            setTimeout(() => {
+                setAlertFlag(false);
+            }, 4000);
+            return;
+        }
+        var tempPrice = price;
+        if(val.hasDiscount){
+            setFinalPrice(finalPrice+discountCalc)
+            tempPrice = discountCalc;
+        }
+        if(!val.hasDiscount){
+            setFinalPrice(finalPrice+price)
+            tempPrice = price;
+        }
         if(cartArr.length===0){
-            const item = new CartItem(name,price)
+            const item = new CartItem(name,tempPrice)
             setCartArr([...cartArr,item])
         }
         else if(cartArr.length!==0){
@@ -22,7 +39,7 @@ export default function ProductComponent({ data, inx, val, cartArr, setCartArr, 
                     return cartArr[i].count();
                 }
                 else if(!cartArr[i].name.includes(name)&&!cartArr[cartArr.length-1].name.includes(name)){
-                    const item = new CartItem(name,price)
+                    const item = new CartItem(name,tempPrice)
                     return setCartArr([...cartArr,item])
                 }
             }
@@ -75,8 +92,12 @@ export default function ProductComponent({ data, inx, val, cartArr, setCartArr, 
             <p className='productComp_name'>{val.name}</p>
             <div className='productComp_priceDiv'>
                 <img className='productComp_cartBtn' src={data.media[0].addToCart} alt="add_to_cart_button" onClick={()=>{addToCart(val.name,val.price)}}/>
-                <h4 className='productComp_price'>₪{val.price} :price</h4>
+                {!val.hasDiscount ?
+                <h4 className='productComp_price'>₪{val.price} :price</h4> : 
+                <h4 className='productComp_price'>₪{discountCalc} :price</h4> 
+                }
             </div>
+            {val.hasDiscount && <div className="onSaleMsg">On Sale!</div>}
         </div>
     </div>
   )

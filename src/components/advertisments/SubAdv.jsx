@@ -6,12 +6,12 @@ export default function SubAdv({data}) {
   useEffect(()=>{
     const placeChanger1 = setInterval(() => {
       setPlace1((place1+1)%4)
-    }, 2500);
+    }, 3500);
     return ()=>clearInterval(placeChanger1);
   });
   return (
     <div id='subAdv_mainContainer'>
-      <img id='subAdv_slider' src={data.advertisments[0][place1]} alt="" />
+      <img id='subAdv_slider' src={data.advertisments[0][place1]} alt="advertisment" />
     </div>
   )
 }

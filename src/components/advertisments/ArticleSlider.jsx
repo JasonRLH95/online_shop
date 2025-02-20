@@ -1,22 +1,38 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import '../CSS/articleSlider.css';
 import ArticleCard from './ArticleCard';
 
-export default function ArticleSlider({ articles }) {
-    const [position, setPosition] = useState(0);
+export default function ArticleSlider({ articles, header, setCurrentProduct }) {
+
+
+    const containerRef = useRef(()=>{
+      var temp = header.replace(" ","_");
+      const article = document.querySelector(`#slider_${temp}`);
+      return article;
+    });
     
     const moveLeft = () => {
-        setPosition(Math.max(position - 1, 0));
+      if(containerRef){
+        containerRef.current.scrollBy({
+          left: -300,
+          'behavior':'smooth'
+        });
+      }
     };
     
     const moveRight = () => {
-        setPosition(Math.min(position + 1, Math.ceil(articles.length / 4) - 1));
+      if(containerRef){
+        containerRef.current.scrollBy({
+          left: 300,
+          'behavior':'smooth'
+        });
+      }
     };
     
     const deployArticles=()=>{
-      return articles.slice(position * 4, position * 4 + 4).map((article, index) => {
+      return articles.map((article, index) => {
         return (<div className='articleCard' key={index}>
-          <ArticleCard article={article} />
+          <ArticleCard article={article} setCurrentProduct={setCurrentProduct}/>
         </div>)
       })
     }
@@ -24,15 +40,15 @@ export default function ArticleSlider({ articles }) {
 
   return (
     <div className='articleSlider_component'>
-        <div className='articleSlider_container'>
+        <div ref={containerRef} className='articleSlider_container' id={`slider_${header.replace(" ", "_")}`}>
           {deployArticles()}
         </div>
 
         {/* Navigation buttons */}
 
-        <button className='articleMovementBtns' id='articleMovementBtn_left' onClick={moveLeft} disabled={position === 0}>{'<'}</button>
+        <button className='articleMovementBtns' id='articleMovementBtn_left' onClick={moveLeft}>{'<'}</button>
         
-        <button className='articleMovementBtns' id='articleMovementBtn_right' onClick={moveRight} disabled={position === Math.ceil(articles.length / 4) - 1}>{'>'}</button>
+        <button className='articleMovementBtns' id='articleMovementBtn_right' onClick={moveRight}>{'>'}</button>
     </div>
   );
 };

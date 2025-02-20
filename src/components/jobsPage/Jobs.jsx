@@ -10,7 +10,7 @@ export default function Jobs({data}) {
   }
   return (
     <div id='jobsComponentMainContainer'>
-      <h1 dir='rtl'>דרושים עובדים לחברת TechSonic</h1>
+      <h1 style={{margin:"50px auto"}} dir='rtl'>דרושים עובדים לחברת TechSonic</h1>
       {deployJobs()}
     </div>
   )

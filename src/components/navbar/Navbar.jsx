@@ -1,9 +1,13 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import React,{ useState} from 'react';
 import '../CSS/navbar.css';
+import Social from './Social';
+import SearchBar from './SearchBar';
+import Logo from './Logo';
+import Profile from './Profile';
 
 
-export default function Navbar({ data, cart, setCurrentProduct }) {
+export default function Navbar({ data, cart, setCurrentProduct, connected, setConnected, currentUser, setCurrentUser }) {
   const [searchData,setSearchData] = useState("");
   const nav = useNavigate();
   const params = useParams();
@@ -11,7 +15,7 @@ export default function Navbar({ data, cart, setCurrentProduct }) {
   const btnWidth = 100/data.navBtns.length;
   const deployBtns=()=>{
     return data.navBtns.map((val,inx)=>{
-      return <button dir='rtl' style={{width:`${btnWidth}%`}} className="navBtns" onClick={()=>{
+      return <button key={`navbar_btn_${inx}`} dir='rtl' style={{width:`${btnWidth}%`}} className="navBtns" onClick={()=>{
         window.scrollTo({
           top:0,
           'behavior':'smooth'
@@ -45,7 +49,7 @@ export default function Navbar({ data, cart, setCurrentProduct }) {
       return;
     }
     const filtered = data.products.filter(item =>{
-      return item.name.includes(searchData);
+      return item.name.toLowerCase().includes(searchData.toLowerCase());
     })
     return filtered.map(item =>{
       return <p className='searchResultRow' onClick={()=>{moveToProductPage(item)}}>{item.name}</p>
@@ -56,24 +60,10 @@ export default function Navbar({ data, cart, setCurrentProduct }) {
   return (
     <div id='navbarMainDiv'>
       <div id='navbarUpperDiv'>
-        <div id='navbarUpperDiv_right'>
-          <img src={data.logos.logo1} alt="TechSonic_logo" id='navbarLogo' onClick={()=>{nav(data.navBtns[0].link)}}/>
-        </div>
-        <div id='navbarUpperDiv_middle'>
-          <input type="text" className='searchbar_input' placeholder='Search...' onChange={(e)=>{setSearchData(e.target.value)}}/>
-          <div className='dynamicResultList'>
-            {renderSearch()}
-          </div>
-
-        </div>
-        <div id='navbarUpperDiv_left'>
-          <a href='https://wa.me/972507170101?text=[message-url-encoded]' target='_blank' rel='noreferrer' className='navbarSocialBtns'><img id='whatsapp' src={data.media[0].whatsappLogo} alt="whatsapp_button" /></a>
-          <a href='https://www.bing.com/ck/a?!&&p=ce4010a74468b8f0JmltdHM9MTcwNTk2ODAwMCZpZ3VpZD0xYTBjNzNjZC1mZjkzLTY3MjQtMWQyNi02MDBlZmVkMTY2ZWEmaW5zaWQ9NTE2NA&ptn=3&ver=2&hsh=3&fclid=1a0c73cd-ff93-6724-1d26-600efed166ea&psq=instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8&ntb=1' target='_blank' rel='noreferrer' className='navbarSocialBtns'><img id='instagram' src={data.media[0].instagramLogo} alt="instagram_button" /></a>
-          <div id='cartDiv'>
-            <img onClick={()=>{nav("/online_shop/payment")}} className='navbarSocialBtns' id='cart' src={data.media[0].cartLogo}alt="shopping_cart_button" />
-            {counter(cart)}
-          </div>
-        </div>
+        <Logo data={data}/>
+        <Profile connected={connected} setConnected={setConnected} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+        <SearchBar renderSearch={renderSearch} setSearchData={setSearchData}/>
+        <Social data={data} counter={counter} cart={cart} connected={connected}/>
       </div>
       <div id='navbarLowerDiv'>
         {deployBtns()}

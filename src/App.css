@@ -3,6 +3,7 @@
   position: relative;
   padding-bottom: 300px;
   min-height:55vh;
+  min-width: 700px;
 }
 ::-webkit-scrollbar{
   width: 10px;
